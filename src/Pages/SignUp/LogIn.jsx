@@ -8,6 +8,8 @@ const LogIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const from = location.state?.from?.pathname || '/';
+
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
@@ -28,7 +30,7 @@ const LogIn = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                // navigate(from, { replace: true });
+                navigate(from, { replace: true });
                 const currentUser = {
                     email: user.email
                 }

@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/login.gif'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Register = () => {
 
     const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleRegister = event => {
         event.preventDefault();
@@ -39,7 +43,7 @@ const Register = () => {
         googleSignIn()
             .then(result => {
                 const user = result.user;
-                // navigate(from, { replace: true });
+                navigate(from, { replace: true });
             })
             .catch(err => console.error(err))
     }
