@@ -12,17 +12,16 @@ const Register = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const photourl = form.photourl.value;
         const password = form.password.value;
 
-        console.log(name, email, photourl, password);
+        console.log(name, email, password);
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 form.reset()
-                handleUpdateUserProfile(name, photourl);
+                handleUpdateUserProfile(name);
             })
             .catch(err => console.error(err))
     }

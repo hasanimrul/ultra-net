@@ -66,24 +66,28 @@ const HeaderBottom = () => {
                         <Link to='/log-in' className="btn btn-outline btn-primary rounded capitalize mr-3">Log in</Link>
                 }
 
+                {user?.email ?
+                    <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src="https://thumbs.dreamstime.com/b/cute-boy-face-cartoon-cute-boy-face-cartoon-vector-illustration-graphic-design-110654225.jpg" alt='profile' />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>
+                                <Link className="justify-between">
+                                    Profile
+                                    <span className="badge">New</span>
+                                </Link>
+                            </li>
+                            <li><Link>Settings</Link></li>
+                            <li><Link>Logout</Link></li>
+                        </ul>
+                    </div>
+                    :
+                    <></>
+                }
 
-                <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img src="https://thumbs.dreamstime.com/b/cute-boy-face-cartoon-cute-boy-face-cartoon-vector-illustration-graphic-design-110654225.jpg" alt='profile' />
-                        </div>
-                    </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li>
-                            <Link className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </Link>
-                        </li>
-                        <li><Link>Settings</Link></li>
-                        <li><Link>Logout</Link></li>
-                    </ul>
-                </div>
             </div>
         </div>
     );
