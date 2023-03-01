@@ -49,7 +49,7 @@ const HeaderBottom = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/log-in' className="btn capitalize mr-3">Log in</Link>
+                <Link to='/log-in' className="btn btn-outline btn-primary rounded capitalize mr-3">Log in</Link>
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-circle avatar">
                         <div className="w-10 rounded-full">
