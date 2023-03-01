@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ServicesCard from './ServicesCard';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Services = () => {
+    AOS.init();
+
     const [services, setServices] = useState([])
     console.log(services);
 
@@ -12,12 +16,12 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <div className='grid grid-cols-2'>
-                <div>
+            <div className='grid grid-cols-2 px-10'>
+                <div data-aos="fade-right">
                     <p className='bg-purple-600 mr-[80%] p-1 text-center rounded text-white'>What We Offer</p>
                     <h1 className='text-4xl'>We are Professional Internet Service Provider.</h1>
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <p className='text-justify'>Efficiently simplify high-payoff communities whereas revolutionary innovation. Monotonectally maximize real-time best practices before superior quality vectors. Interactively supply dynamic.</p>
                     <button className="btn btn-warning mt-10 px-10">Learn More</button>
                 </div>

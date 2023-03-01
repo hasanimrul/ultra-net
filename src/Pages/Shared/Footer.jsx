@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { AiFillMail } from 'react-icons/ai';
 import { MdCall } from "react-icons/md";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Footer = () => {
+    AOS.init();
     return (
         <div className='shadow-xl bg-gray-900 mt-40'>
 
             <footer className="footer grid-cols-4  p-10 text-base-content">
-                <div className="card  bg-gray-400 shadow-xl p-10 -mt-28 rounded-md">
+                <div className="card  bg-gray-400 shadow-xl p-10 -mt-28 rounded-md" data-aos="fade-down">
                     <div className="flex flex-col justify-center">
                         <h2 className="text-2xl font-bold"><span className='  text-purple-700'>Ultra</span>Net</h2>
                         <p className='mb-5'>Distinctively repurpose principle-centered metrics for distinctive niche markets.</p>

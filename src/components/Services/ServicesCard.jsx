@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ServicesCard = ({ service }) => {
+    AOS.init();
     const { title, img, price, description, _id } = service
     return (
-        <div className="card bg-base-100 border hover:shadow-2xl">
+        <div className="card bg-base-100 border hover:shadow-2xl" data-aos="zoom-in-down">
             <figure className="px-10 pt-10">
                 <img src={img} alt="service" className="w-1/3 text-purple-600" />
             </figure>
