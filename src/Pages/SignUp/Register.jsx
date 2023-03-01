@@ -1,14 +1,48 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/login.gif'
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Register = () => {
-    const handleRegister = event => {
 
+    const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const photourl = form.photourl.value;
+        const password = form.password.value;
+
+        console.log(name, email, photourl, password);
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset()
+                handleUpdateUserProfile(name, photourl);
+            })
+            .catch(err => console.error(err))
     }
+    const handleUpdateUserProfile = (name, photourl) => {
+        const profile = {
+            displayName: name,
+            photoURL: photourl
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(e => console.error(e))
+    };
 
     const handleGoogleSignIn = () => {
-
+        googleSignIn()
+            .then(result => {
+                const user = result.user;
+                // navigate(from, { replace: true });
+            })
+            .catch(err => console.error(err))
     }
     return (
         <div className='grid grid-cols-2 items-center'>

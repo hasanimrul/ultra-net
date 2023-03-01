@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/isp.png'
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const HeaderBottom = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handlesignOut = () => {
+        logOut()
+            .then(res => { })
+            .catch(err => { })
+    }
+
     return (
         <div className="navbar bg-base-100 pb-8 z-10">
             <div className="navbar-start">
@@ -49,7 +59,14 @@ const HeaderBottom = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/log-in' className="btn btn-outline btn-primary rounded capitalize mr-3">Log in</Link>
+                {
+                    user?.email ?
+                        <Link onClick={handlesignOut} to='/log-in' className="btn btn-outline btn-primary rounded capitalize mr-3">Log out</Link>
+                        :
+                        <Link to='/log-in' className="btn btn-outline btn-primary rounded capitalize mr-3">Log in</Link>
+                }
+
+
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-circle avatar">
                         <div className="w-10 rounded-full">

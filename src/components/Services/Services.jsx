@@ -3,9 +3,10 @@ import ServicesCard from './ServicesCard';
 
 const Services = () => {
     const [services, setServices] = useState([])
+    console.log(services);
 
     useEffect(() => {
-        fetch('https://ultra-net-server-zeta.vercel.app')
+        fetch('https://ultra-net-server-zeta.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
