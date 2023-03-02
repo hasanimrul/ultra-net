@@ -8,7 +8,7 @@ const OurRecords = () => {
     })
     return (
         <div className=''>
-            <div className="flex shadow-2xl mb-32  text-center border rounded">
+            <div className="flex mb-32  text-center border rounded">
 
                 <div className="stat">
                     <div className="stat-figure text-primary">
