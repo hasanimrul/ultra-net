@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const MiddleHero = () => {
     AOS.init();
     return (
-        <div className=" bg-purple-100">
+        <div className=" bg-base-200">
             <div className="grid grid-cols-2 flex-col lg:flex-row-reverse items-center p-14 ">
                 <div className="text-center lg:text-left mr-5" data-aos="fade-right">
                     <h1 className="text-5xl font-bold mb-5 font-serif">Experience The Magic</h1>
