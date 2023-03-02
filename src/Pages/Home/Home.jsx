@@ -6,6 +6,7 @@ import Discount from '../../components/Home/Discount';
 import MiddleHero from '../../components/Home/MiddleHero';
 import Newsletter from '../../components/Home/Newsletter';
 import OurRecords from '../../components/Home/OurRecords';
+import Package from '../../components/Home/Package';
 import TopIcons from '../../components/Home/TopIcons';
 import WeProdive from '../../components/Home/WeProdive';
 import Services from '../../components/Services/Services';

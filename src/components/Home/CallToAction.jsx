@@ -9,7 +9,7 @@ const CallToAction = () => {
                 <h2 className='text-3xl font-bold text-white font-serif'>Call Us Now And Connect Ultranet <br />+123-234-1234</h2>
             </div>
             <div>
-                <button className="btn btn-outline btn-warning">Check Coverage in Your Area <BsArrowRight /></button>
+                <button className="btn btn-warning rounded hover:rounded hover:btn">Check Coverage<BsArrowRight /></button>
             </div>
         </div>
     );

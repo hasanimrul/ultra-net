@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaMailBulk } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
-import img from '../../assets/net.jpg'
+import img from '../../assets/gift.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,7 +15,7 @@ const Newsletter = () => {
                 </div>
                 <div>
                     <input type="text" placeholder="Email" className="input input-bordered w-1/2 rounded-full" />
-                    <button className="btn btn-warning rounded-full ml-10">sign up</button>
+                    <button className="btn btn-warning hover:btn hover:rounded-full rounded-full ml-10">sign up</button>
                 </div>
             </div>
             <div className='grid grid-cols-2 gap-5 my-3 mr-3'>

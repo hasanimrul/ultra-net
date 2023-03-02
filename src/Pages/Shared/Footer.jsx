@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { AiFillMail } from 'react-icons/ai';
 import { MdCall } from "react-icons/md";
+import img from '../../assets/isp.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -13,13 +14,16 @@ const Footer = () => {
         <div className='shadow-xl bg-gray-900 mt-40'>
 
             <footer className="footer grid-cols-4  p-10 text-base-content">
-                <div className="card  bg-gray-400 shadow-xl p-10 -mt-28 rounded-md" data-aos="fade-down">
+                <div className="card  bg-gray-400 p-12 -mt-28 rounded-md" data-aos="fade-down">
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-2xl font-bold"><span className='  text-purple-700'>Ultra</span>Net</h2>
+                        <div className='flex mb-2'>
+                            <img src={img} className='w-1/6' alt='logo' />
+                            <h2 className="text-3xl font-bold"><span className='  text-purple-700'> Ultra</span>Net</h2>
+                        </div>
                         <p className='mb-5'>Distinctively repurpose principle-centered metrics for distinctive niche markets.</p>
-                        <p className='flex font-bold items-center gap-2'><FaMapMarkerAlt className='text-purple-900' />Jl. Raya Kuta No.70, Kuta</p>
-                        <p className='flex font-bold items-center gap-2'><AiFillMail className='text-purple-900' />support@ultranet.com</p>
-                        <p className='flex font-bold items-center gap-2'><MdCall className='text-purple-900' />(+021) 8733 2654</p>
+                        <p className='flex font-bold text-base mb-2 items-center gap-2'><FaMapMarkerAlt className='text-purple-900' />Jl. Raya Kuta No.70, Kuta</p>
+                        <p className='flex font-bold text-base mb-2 items-center gap-2'><AiFillMail className='text-purple-900' />support@ultranet.com</p>
+                        <p className='flex font-bold text-base mb-2 items-center gap-2'><MdCall className='text-purple-900' />(+021) 8733 2654</p>
                     </div>
                 </div>
                 <div>
@@ -44,8 +48,8 @@ const Footer = () => {
                 </div>
             </footer>
             <footer className="footer border-t px-10 py-4 text-base-content">
-                <div className="items-center grid-flow-col">
-
+                <div className="flex items-center">
+                    <img src={img} className='w-1/12' alt='logo' />
                     <p className='text-white'><span className='text-2xl font-bold text-purple-700'>Ultra</span>Net Ltd. <br />Providing reliable internet service since 1992</p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">

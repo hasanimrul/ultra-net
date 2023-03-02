@@ -15,22 +15,22 @@ const TopIcons = () => {
                 <p>Progressively harness innovative synergy via impactful models. <br />Progressively conceptualize  robust solutions before economically sound users.</p>
             </div>
             <div className='flex justify-center gap-10 my-20'>
-                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="fade-right">
+                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="zoom-in-up">
                     <img src={wifi} alt='wifi' className='w-1/3' />
                     <h3 >Wifi seamless</h3>
                     <p className='text-sm text-center'>Energistically exploit seamless collaboration and idea-sharing before stand-alone process.</p>
                 </div>
-                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="fade-up">
+                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="zoom-in-up">
                     <img src={signal} alt='wifi' className='w-1/3' />
                     <h3 >Reliable connection</h3>
                     <p className='text-sm text-center'>Conveniently deploy ethical processes through fully researched users. Dynamically.</p>
                 </div>
-                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="fade-down" >
+                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="zoom-in-up">
                     <img src={device} alt='wifi' className='w-1/3' />
                     <h3 >Protect your devices</h3>
                     <p className='text-sm text-center'>Uniquely implement empowered intellectual capital rather than standards compliant processes.</p>
                 </div>
-                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="fade-left">
+                <div className='flex flex-col items-center gap-3 text-3xl' data-aos="zoom-in-up">
                     <img src={speed} alt='wifi' className='w-1/3' />
                     <h3 >Download 1Gbps</h3>
                     <p className='text-sm text-center'>Efficiently enhance functional quality vectors through interactive leadership skills.</p>

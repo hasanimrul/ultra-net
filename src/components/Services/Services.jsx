@@ -23,7 +23,7 @@ const Services = () => {
                 </div>
                 <div data-aos="fade-left">
                     <p className='text-justify'>Efficiently simplify high-payoff communities whereas revolutionary innovation. Monotonectally maximize real-time best practices before superior quality vectors. Interactively supply dynamic.</p>
-                    <button className="btn btn-warning mt-10 px-10">Learn More</button>
+                    <button className="btn btn-warning hover:btn hover:px-10 rounded hover:rounded mt-10 px-10">Learn More</button>
                 </div>
 
             </div>
